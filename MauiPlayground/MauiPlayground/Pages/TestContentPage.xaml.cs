@@ -5,5 +5,6 @@ public partial class TestContentPage : ContentPage
     public TestContentPage()
     {
         InitializeComponent();
+        BindingContext = new TestContentViewModel();
     }
 }

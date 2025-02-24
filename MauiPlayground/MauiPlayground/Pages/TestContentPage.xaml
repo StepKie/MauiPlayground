@@ -8,7 +8,8 @@
   xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
   xmlns:resx="clr-namespace:MauiPlayground.Resources.Strings"
   xmlns:translate="clr-namespace:MauiPlayground"
-  xmlns:uranium="clr-namespace:UraniumUI.Pages">
+  xmlns:vm="clr-namespace:MauiPlayground.ViewModels"
+  x:DataType="vm:TestContentViewModel">
   <ContentPage.Content>
     <StackLayout>
       <Label Style="{StaticResource ExplicitMarginLabel}" Text="TESTLABEL -EXPLICIT STYLE (MARGIN 20)" />
@@ -16,6 +17,7 @@
       <Label Margin="30" Text="TESTLABEL3 - EXPLICITMARGIN (30)" />
       <material:TextField Title="LocalizeStatic" Text="{x:Static resx:MyStrings.HelloWorld}" />
       <material:TextField Title="LocalizeExtension" Text="{translate:Localize HelloWorld}" />
+      <material:PickerField Title="Pick an option" ItemDisplayBinding="{Binding Name}" ItemsSource="{Binding Models}" />
       <!--  This is where to insert your test content  -->
     </StackLayout>
   </ContentPage.Content>
