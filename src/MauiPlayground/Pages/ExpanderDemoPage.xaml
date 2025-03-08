@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  x:Class="MauiPlayground.Pages.ExpanderDemoPage"
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+  Title="ExpanderDemoPage">
+  <StackLayout>
+    <toolkit:Expander IsExpanded="False">
+      <toolkit:Expander.Header>
+        <StackLayout Orientation="Horizontal">
+          <Label HorizontalOptions="Center" Text="Click to Expand (Default Expanded: false)" VerticalTextAlignment="Center" />
+        </StackLayout>
+      </toolkit:Expander.Header>
+      <toolkit:Expander.Content>
+        <CollectionView>
+          <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+              <x:String>One</x:String>
+              <x:String>Two</x:String>
+              <x:String>Three</x:String>
+              <x:String>Four</x:String>
+              <x:String>Five</x:String>
+              <x:String>Six</x:String>
+              <x:String>Seven</x:String>
+              <x:String>Eight</x:String>
+            </x:Array>
+          </CollectionView.ItemsSource>
+          <CollectionView.ItemTemplate>
+            <DataTemplate>
+              <Entry Text="{Binding .}" />
+            </DataTemplate>
+          </CollectionView.ItemTemplate>
+        </CollectionView>
+      </toolkit:Expander.Content>
+    </toolkit:Expander>
+    <toolkit:Expander IsExpanded="True">
+      <toolkit:Expander.Header>
+        <StackLayout Orientation="Horizontal">
+          <Label HorizontalOptions="Center" Text="Click to Expand (Default Expanded: true)" VerticalTextAlignment="Center" />
+        </StackLayout>
+      </toolkit:Expander.Header>
+      <toolkit:Expander.Content>
+        <CollectionView>
+          <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+              <x:String>One</x:String>
+              <x:String>Two</x:String>
+              <x:String>Three</x:String>
+              <x:String>Four</x:String>
+              <x:String>Five</x:String>
+              <x:String>Six</x:String>
+              <x:String>Seven</x:String>
+              <x:String>Eight</x:String>
+            </x:Array>
+          </CollectionView.ItemsSource>
+          <CollectionView.ItemTemplate>
+            <DataTemplate>
+              <Entry Text="{Binding .}" />
+            </DataTemplate>
+          </CollectionView.ItemTemplate>
+        </CollectionView>
+      </toolkit:Expander.Content>
+    </toolkit:Expander>
+  </StackLayout>
+</ContentPage>

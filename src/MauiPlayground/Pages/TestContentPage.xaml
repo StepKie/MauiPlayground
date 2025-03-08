@@ -5,7 +5,7 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
   xmlns:ctrls="clr-namespace:MauiPlayground.Controls"
   xmlns:local="clr-namespace:MauiPlayground.Pages"
-  xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+  xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
   xmlns:resx="clr-namespace:MauiPlayground.Resources.Strings"
   xmlns:translate="clr-namespace:MauiPlayground"
   xmlns:vm="clr-namespace:MauiPlayground.ViewModels"

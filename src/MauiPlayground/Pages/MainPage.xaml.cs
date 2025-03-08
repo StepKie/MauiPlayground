@@ -1,18 +1,9 @@
-﻿using InputKit.Shared.Controls;
-using UraniumUI.Pages;
-
 namespace MauiPlayground.Pages;
 
-public partial class MainPage : UraniumContentPage
+public partial class MainPage : ContentPage
 {
-    public MainPage()
-    {
-        SelectionView.GlobalSetting.CornerRadius = 0;
-        InitializeComponent();
-    }
-
-    private void ShowBottomSheet(object sender, EventArgs e)
-    {
-        bottomSheet.IsPresented = true;
-    }
+	public MainPage()
+	{
+		InitializeComponent();
+	}
 }

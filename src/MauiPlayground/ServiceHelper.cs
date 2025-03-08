@@ -8,9 +8,9 @@ public static class ServiceHelper
 #if WINDOWS
         MauiWinUIApplication.Current.Services;
 #elif ANDROID
-        MauiApplication.Current.Services;
+         IPlatformApplication.Current.Services;
 #elif IOS || MACCATALYST
-        MauiUIApplicationDelegate.Current.Services;
+         IPlatformApplication.Current.Services;
 #else
         null;
 #endif
