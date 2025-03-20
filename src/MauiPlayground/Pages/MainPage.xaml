@@ -3,9 +3,19 @@
   x:Class="MauiPlayground.Pages.MainPage"
   xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:material="clr-namespace:UraniumUI.Material.Controls;assembly=UraniumUI.Material"
   Title="MainPage">
+  <ContentPage.Resources>
+    <Style TargetType="Label">
+      <Setter Property="Margin" Value="{OnPlatform iOS='10', Default='5'}" />
+    </Style>
+  </ContentPage.Resources>
   <VerticalStackLayout>
-    <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Welcome to .NET MAUI!" />
-    <Label HorizontalOptions="Center" VerticalOptions="Center" Text="This is an application to test various features and demonstrate bugs" />
+    <Label HorizontalOptions="Center" Text="Here, the first text field is not clearable:" />
+    <material:TextField Title="Clearable TextField" AllowClear="True" Text="Test Text" />
+    <material:TextField Title="Non-Clearable TextField" AllowClear="False" Text="Test Text" />
+    <Label HorizontalOptions="Center" Text="For contrast, DatePicker is still clearable" />
+    <material:DatePickerField Title="Clearable DatePicker" AllowClear="True" />
+    <material:DatePickerField Title="Not-Clearable DatePicker" AllowClear="False" />
   </VerticalStackLayout>
 </ContentPage>
