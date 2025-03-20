@@ -5,9 +5,9 @@ namespace MauiPlayground.ViewModels;
 
 public class MainPageViewModel : BindableObject
 {
-    public ObservableCollection<TodoItem> Items { get; protected set; } = new ObservableCollection<TodoItem>();
+    public ObservableCollection<TodoItem> Items { get; protected set; } = [];
 
-    public ObservableCollection<TodoItem> SelectedItems { get; set; } = new ObservableCollection<TodoItem>();
+    public ObservableCollection<TodoItem> SelectedItems { get; set; } = [];
 
     private TodoItem newItem = new();
     public TodoItem NewItem { get => newItem; set { newItem = value; OnPropertyChanged(); } }
@@ -53,7 +53,7 @@ public class TodoItem : UraniumBindableObject
 
     public TodoItemType Type { get; set; }
 
-    public static List<TodoItemType> AvailableTypes => Enum.GetValues(typeof(TodoItemType)).Cast<TodoItemType>().ToList();
+    public static List<TodoItemType> AvailableTypes => Enum.GetValues<TodoItemType>().ToList();
 
     public enum TodoItemType
     {

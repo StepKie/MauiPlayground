@@ -12,11 +12,10 @@ internal partial class EntryViewModel : ObservableValidator
     [Required]
     [ObservableProperty]
     private string _password;
-    public List<string> Dbs { get; set; } = new List<string> { "test1", "test2" };
+    public List<string> Dbs { get; set; } = ["test1", "test2"];
 
     [ObservableProperty]
     private bool _isPickerVisible = false;
-
 
     [RelayCommand]
     public void Sample(string moo)
